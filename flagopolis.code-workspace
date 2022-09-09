@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"workbench.startupEditor": "none",
+		"gitlens.showWelcomeOnInstall": false,
+		"gitlens.showWhatsNewAfterUpgrades": false,
+		"gitlens.plusFeatures.enabled": false
+	},
+	"extensions": {
+		"recommendations": [
+			"denoland.vscode-deno",
+			"eamodio.gitlens"
+		]
+	}
+}

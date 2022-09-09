@@ -1,0 +1,22 @@
+image: gitpod/workspace-base
+
+tasks:
+  - before: source scripts/setup.sh
+
+vscode:
+  extensions:
+    - denoland.vscode-deno
+    - eamodio.gitlens
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: true
+
+checkoutLocation: flagopolis
+workspaceLocation: flagopolis/flagopolis.code-workspace
