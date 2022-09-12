@@ -6,10 +6,16 @@
 	],
 	"settings": {
 		"editor.tabSize": 2,
+		"editor.formatOnSave": true,
 		"workbench.startupEditor": "none",
 		"gitlens.showWelcomeOnInstall": false,
 		"gitlens.showWhatsNewAfterUpgrades": false,
-		"gitlens.plusFeatures.enabled": false
+		"gitlens.plusFeatures.enabled": false,
+		"deno.enablePaths": [
+			"./flagopolis"
+		],
+		"deno.lint": true,
+		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"extensions": {
 		"recommendations": [

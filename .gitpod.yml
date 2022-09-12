@@ -1,12 +1,24 @@
 image: gitpod/workspace-base
 
 tasks:
-  - before: source scripts/setup.sh
+  - before: |
+      source scripts/setup.sh
+    init: |
+      deno cache --config flagopolis/deno.json --lock flagopolis/lock.json flagopolis/dev.ts flagopolis/main.ts
+    command: |
+      cd flagopolis
+      deno task start
+
+ports:
+  - name: Flagopolis
+    port: 8000
+    onOpen: notify
 
 vscode:
   extensions:
     - denoland.vscode-deno
     - eamodio.gitlens
+    # - sastan.twind-intellisense
 
 github:
   prebuilds:
