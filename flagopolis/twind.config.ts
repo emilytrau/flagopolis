@@ -4,8 +4,11 @@ import * as colors from "twind/colors";
 export default {
   selfURL: import.meta.url,
   theme: {
-    colors: {
-      primary: colors.lime,
+    extend: {
+      colors: {
+        primary: colors.lime,
+        slate: colors.blueGray,
+      },
     },
   },
 } as Options;
