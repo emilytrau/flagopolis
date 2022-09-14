@@ -11,10 +11,13 @@
 		"gitlens.showWelcomeOnInstall": false,
 		"gitlens.showWhatsNewAfterUpgrades": false,
 		"gitlens.plusFeatures.enabled": false,
+		"deno.path": "/workspace/.deno/bin/deno",
+		"deno.cache": "/workspace/.deno/cache",
 		"deno.enablePaths": [
 			"./flagopolis"
 		],
 		"deno.lint": true,
+		"deno.config": "./flagopolis/deno.json",
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"extensions": {
