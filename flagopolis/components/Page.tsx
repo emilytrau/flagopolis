@@ -6,7 +6,7 @@ const Page: FunctionComponent<{ pageProps: PageProps }> = (
   { children, pageProps },
 ) => {
   return (
-    <div class="flex flex-row min-h-screen bg-slate-50">
+    <div class="flex flex-row min-h-screen bg-secondary-50">
       <Navigation pageProps={pageProps} />
       <div class="flex-1">
         {children}

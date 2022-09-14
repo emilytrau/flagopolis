@@ -20,7 +20,7 @@ const ChallengeCard: FunctionComponent<Props> = ({ challenge, active }) => {
     <div
       class={`flex flex-col h-32 w-764 p-4 shadow-md rounded-2xl ring-primary-200 ${
         active && "ring-4"
-      } ${challenge.solved ? "bg-primary-200" : "bg-slate-300"}`}
+      } ${challenge.solved ? "bg-primary-200" : "bg-secondary-300"}`}
       disabled={active}
     >
       <div class="flex-1 overflow-ellipsis overflow-hidden">

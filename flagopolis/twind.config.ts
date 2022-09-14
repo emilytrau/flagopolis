@@ -7,7 +7,7 @@ export default {
     extend: {
       colors: {
         primary: colors.lime,
-        slate: colors.blueGray,
+        secondary: colors.blueGray,
       },
     },
   },
