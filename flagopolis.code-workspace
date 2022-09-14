@@ -7,6 +7,10 @@
 	"settings": {
 		"editor.tabSize": 2,
 		"editor.formatOnSave": true,
+		"editor.suggest.showStatusBar": true,
+		"editor.quickSuggestions": {
+			"strings": "on"
+		},
 		"files.autoSave": "off",
 		"workbench.startupEditor": "none",
 		"gitlens.showWelcomeOnInstall": false,

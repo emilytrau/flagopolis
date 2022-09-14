@@ -1,7 +1,10 @@
-export default function Home() {
+import { PageProps } from "$fresh/server.ts";
+import Page from "../components/Page.tsx";
+
+export default function Home(pageProps: PageProps) {
   return (
-    <div class="p-4 mx-auto max-w-screen-md">
+    <Page pageProps={pageProps}>
       hello
-    </div>
+    </Page>
   );
 }
