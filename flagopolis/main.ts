@@ -10,7 +10,14 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
+import twemojiPlugin from "./fresh-plugins/twemoji/mod.ts";
+
 import db from "./db/mod.ts";
 
 await db.start();
-await start(manifest, { plugins: [twindPlugin(twindConfig)] });
+await start(manifest, {
+  plugins: [
+    twindPlugin(twindConfig),
+    twemojiPlugin(),
+  ],
+});

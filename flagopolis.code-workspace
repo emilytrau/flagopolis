@@ -9,6 +9,7 @@
 		"editor.formatOnSave": true,
 		"editor.suggest.showStatusBar": true,
 		"editor.quickSuggestions": {
+			"other": "on",
 			"strings": "on"
 		},
 		"files.autoSave": "off",
