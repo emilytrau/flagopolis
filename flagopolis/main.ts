@@ -12,9 +12,9 @@ import twindConfig from "./twind.config.ts";
 
 import twemojiPlugin from "./fresh-plugins/twemoji/mod.ts";
 
-import db from "./db/mod.ts";
+// import db from "./db/mod.ts";
 
-await db.start();
+// await db.start();
 await start(manifest, {
   plugins: [
     twindPlugin(twindConfig),
