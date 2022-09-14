@@ -1,9 +1,5 @@
 {
-  "tasks": {
-    "start": "deno run -A --config deno.json --lock lock.json --watch=static/,routes/ dev.ts",
-    "lock": "deno cache --config deno.json --lock lock.json --lock-write dev.ts main.ts"
-  },
-  "importMap": "./import_map.json",
+  "importMap": "../import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"

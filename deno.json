@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "start": "deno run --unstable -A --config flagopolis/deno.json --watch=flagopolis/static/,flagopolis/routes/ flagopolis/dev.ts",
+    "cache": "deno cache --unstable --config deno.json flagopolis/dev.ts flagopolis/main.ts",
+    "sqlite-recreate-database": "(rm flagopolis/db/sqlite/db.sqlite3 || 1) && sqlite3 flagopolis/db/sqlite/db.sqlite3 '.read flagopolis/db/sqlite/schema.sql'"
+  },
+  "importMap": "./import_map.json",
+  "fmt": {
+    "files": { "exclude": ["./flagopolis.code-workspace"] },
+    "options": {
+      "indentWidth": 2,
+      "useTabs": false
+    }
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "require-await"
+      ]
+    }
+  }
+}

@@ -7,17 +7,18 @@
 	"settings": {
 		"editor.tabSize": 2,
 		"editor.formatOnSave": true,
+		"files.autoSave": "off",
 		"workbench.startupEditor": "none",
 		"gitlens.showWelcomeOnInstall": false,
 		"gitlens.showWhatsNewAfterUpgrades": false,
 		"gitlens.plusFeatures.enabled": false,
 		"deno.path": "/workspace/.deno/bin/deno",
 		"deno.cache": "/workspace/.deno/cache",
+		"deno.config": "./deno.json",
 		"deno.enablePaths": [
 			"./flagopolis"
 		],
 		"deno.lint": true,
-		"deno.config": "./flagopolis/deno.json",
 		"editor.defaultFormatter": "denoland.vscode-deno"
 	},
 	"extensions": {
