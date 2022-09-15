@@ -1,4 +1,5 @@
 {
+  "__why_two_deno_config_files?__": "I'd prefer to use a single config/import map for the monorepo but Fresh always expects 'deno.json' to be in this directory...",
   "importMap": "../import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
