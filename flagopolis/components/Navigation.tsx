@@ -1,5 +1,4 @@
 import { PageProps } from "$fresh/server.ts";
-import NavItem from "./NavItem.tsx";
 import CreditsBadge from "./CreditsBadge.tsx";
 
 export interface Props {
@@ -35,14 +34,22 @@ const Navigation = ({ pageProps }: Props) => {
   }
 
   return (
-    <nav class="bg-primary-300 w-64 shadow">
+    <nav class="hidden md:block bg-primary-200 w-64 shadow flex-none">
       <div class="sticky top-0 h-full flex flex-col">
         <ul class="flex-1">
           {items.map((item) => (
-            <NavItem
-              active={isActive(item.href, item.exact)}
-              {...item}
-            />
+            <li>
+              <a
+                href={item.href}
+                class={`flex flex-row items-center w-full h-12 px-4 ring-8 ring-primary-200 ring-inset rounded-xl hover:bg-primary-300 ${
+                  isActive(item.href, item.exact) && "bg-primary-300"
+                }`}
+                draggable={"false" as unknown as boolean}
+              >
+                <span class="pr-2 text-xl">{item.emoji}</span>
+                <span>{item.name}</span>
+              </a>
+            </li>
           ))}
         </ul>
         <CreditsBadge />

@@ -95,6 +95,7 @@ const tempChallengeData: ChallengeSchema[] = [
 
 export default function Challenges(pageProps: PageProps) {
   const challengeID = parseInt(pageProps.params.id, 10);
+  const isIndexPage = pageProps.params.id === "";
 
   const byCategory: Record<string, ChallengeSchema[]> = {};
   for (const chal of tempChallengeData) {
@@ -110,7 +111,11 @@ export default function Challenges(pageProps: PageProps) {
   return (
     <Page pageProps={pageProps}>
       <div class="flex w-full h-full">
-        <div class="flex-1 px-8 pb-4 overflow-auto">
+        <div
+          class={`flex-1 px-8 pb-4 overflow-auto mx-auto ${
+            !isIndexPage ? "hidden" : "block"
+          } md:block`}
+        >
           {sorted.map(([category, challenges]) => (
             <Category
               name={category}
@@ -119,7 +124,11 @@ export default function Challenges(pageProps: PageProps) {
             />
           ))}
         </div>
-        <div class="flex-1 bg-primary-50 shadow hidden md:block">
+        <div
+          class={`flex-1 bg-primary-50 shadow ${
+            isIndexPage ? "hidden" : "block"
+          } md:block`}
+        >
           Challenge info: {challengeID}
         </div>
       </div>
@@ -137,12 +146,12 @@ function Category(
   return (
     <>
       <h3
-        class="py-4 col-span-full font-semibold text-xl uppercase"
+        class="py-4 font-bold text-4xl uppercase"
         id={props.name}
       >
         {props.name}
       </h3>
-      <div class="flex flex-wrap gap-4 pb-4">
+      <div class="flex flex-wrap flex-col md:flex-row gap-4 pb-4">
         {props.challenges.map((x) => (
           <a href={`/challenges/${x.id}#${props.name}`}>
             <ChallengeCard
