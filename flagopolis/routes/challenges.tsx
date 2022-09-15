@@ -85,7 +85,8 @@ const tempChallengeData: ChallengeSchema[] = [
     id: 9,
     name:
       "Easily Can Break this is a really long challenge title blah blah blah",
-    category: "crypto",
+    category:
+      "crypto dhjsiakldhsjaklbcjkcvhjklefhuifehwklnfm,xncjklanesjklfnesjal",
     difficulty: "easy",
     points: 100,
     solves: 0,
@@ -112,7 +113,7 @@ export default function Challenges(pageProps: PageProps) {
     <Page pageProps={pageProps}>
       <div class="flex w-full h-full">
         <div
-          class={`flex-1 px-8 pb-4 overflow-auto mx-auto ${
+          class={`flex-1 min-w-0 px-8 pb-4 overflow-auto mx-auto ${
             !isIndexPage ? "hidden" : "block"
           } md:block`}
         >
@@ -125,7 +126,7 @@ export default function Challenges(pageProps: PageProps) {
           ))}
         </div>
         <div
-          class={`flex-1 bg-primary-50 shadow ${
+          class={`flex-1 min-w-0 bg-primary-50 shadow ${
             isIndexPage ? "hidden" : "block"
           } md:block`}
         >
@@ -146,7 +147,7 @@ function Category(
   return (
     <>
       <h3
-        class="py-4 font-bold text-4xl uppercase"
+        class="py-4 font-bold text-4xl uppercase truncate"
         id={props.name}
       >
         {props.name}

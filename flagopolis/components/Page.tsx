@@ -13,9 +13,9 @@ const Page = ({ children, pageProps }: Props) => {
     <>
       <Head>
       </Head>
-      <div class="flex flex-col md:flex-row bg-secondary-50 h-screen h-[100svh]">
+      <div class="flex flex-col md:flex-row bg-secondary-50 w-screen w-[100svw] h-screen h-[100svh]">
         <Navigation pageProps={pageProps} />
-        <div class="flex-1 min-h-0">
+        <div class="flex-1 min-h-0 min-w-0">
           {children}
         </div>
         <MobileNavigation pageProps={pageProps} />
