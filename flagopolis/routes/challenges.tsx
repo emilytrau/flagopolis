@@ -109,18 +109,17 @@ export default function Challenges(pageProps: PageProps) {
 
   return (
     <Page pageProps={pageProps}>
-      <div class="flex w-full">
-        <div class="flex-1 px-8 pb-4 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 overflow-auto h-screen">
-          {sorted.map(([category, challenges], id) => (
+      <div class="flex w-full h-full">
+        <div class="flex-1 px-8 pb-4 overflow-auto">
+          {sorted.map(([category, challenges]) => (
             <Category
-              categoryID={id}
               name={category}
               challenges={challenges}
               activeChallenge={challengeID}
             />
           ))}
         </div>
-        <div class="flex-1 bg-primary-50 shadow">
+        <div class="flex-1 bg-primary-50 shadow hidden md:block">
           Challenge info: {challengeID}
         </div>
       </div>
@@ -130,7 +129,6 @@ export default function Challenges(pageProps: PageProps) {
 
 function Category(
   props: {
-    categoryID: number;
     name: string;
     challenges: ChallengeSchema[];
     activeChallenge: number;
@@ -139,19 +137,21 @@ function Category(
   return (
     <>
       <h3
-        class="pt-4 col-span-full font-semibold text-xl uppercase"
-        id={`${props.categoryID}`}
+        class="py-4 col-span-full font-semibold text-xl uppercase"
+        id={props.name}
       >
         {props.name}
       </h3>
-      {props.challenges.map((x) => (
-        <a href={`/challenges/${x.id}#${props.categoryID}`}>
-          <ChallengeCard
-            challenge={x}
-            active={x.id === props.activeChallenge}
-          />
-        </a>
-      ))}
+      <div class="flex flex-wrap gap-4 pb-4">
+        {props.challenges.map((x) => (
+          <a href={`/challenges/${x.id}#${props.name}`}>
+            <ChallengeCard
+              challenge={x}
+              active={x.id === props.activeChallenge}
+            />
+          </a>
+        ))}
+      </div>
     </>
   );
 }
