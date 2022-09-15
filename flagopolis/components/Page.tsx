@@ -1,10 +1,12 @@
 import { PageProps } from "$fresh/server.ts";
-import { FunctionComponent } from "preact";
+import { RenderableProps } from "preact";
 import Navigation from "./Navigation.tsx";
 
-const Page: FunctionComponent<{ pageProps: PageProps }> = (
-  { children, pageProps },
-) => {
+export type Props = RenderableProps<{
+  pageProps: PageProps;
+}>;
+
+const Page = ({ children, pageProps }: Props) => {
   return (
     <div class="flex flex-row min-h-screen bg-secondary-50">
       <Navigation pageProps={pageProps} />

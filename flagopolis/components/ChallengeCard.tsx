@@ -1,5 +1,3 @@
-import { FunctionComponent } from "preact";
-
 export interface ChallengeSchema {
   id: number;
   name: string;
@@ -15,7 +13,7 @@ export interface Props {
   active: boolean;
 }
 
-const ChallengeCard: FunctionComponent<Props> = ({ challenge, active }) => {
+const ChallengeCard = ({ challenge, active }: Props) => {
   return (
     <div
       class={`flex flex-col h-32 w-764 p-4 shadow-md rounded-2xl ring-primary-200 ${
