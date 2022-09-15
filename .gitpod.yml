@@ -4,7 +4,7 @@ tasks:
   - before: |
       source scripts/setup.sh
     init: |
-      deno cache --config flagopolis/deno.json flagopolis/dev.ts flagopolis/main.ts
+      deno task cache
     command: |
       deno task start
 
