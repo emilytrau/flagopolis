@@ -12,10 +12,29 @@ const Page = ({ children, pageProps }: Props) => {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              @supports(padding:max(0px)) {
+                .pad-mobile-notch {
+                  padding-left: max(0px, env(safe-area-inset-left));
+                  padding-right: max(0px, env(safe-area-inset-right));
+                }
+                .pad-mobile-notch-bottom {
+                  padding-bottom: max(0px, env(safe-area-inset-bottom));
+                }
+              }
+            `,
+          }}
+        />
       </Head>
-      <div class="flex flex-col md:flex-row bg-secondary-50 w-screen w-[100svw] h-screen h-[100svh]">
+      <div class="flex flex-col lg:flex-row w-screen min-h-[100svh] lg:h-screen">
         <Navigation pageProps={pageProps} />
-        <div class="flex-1 min-h-0 min-w-0">
+        <div class="pad-mobile-notch flex-1 min-h-0 min-w-0">
           {children}
         </div>
         <MobileNavigation pageProps={pageProps} />

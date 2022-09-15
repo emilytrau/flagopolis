@@ -34,7 +34,7 @@ const Navigation = ({ pageProps }: Props) => {
   }
 
   return (
-    <nav class="hidden md:block bg-primary-200 w-64 shadow flex-none">
+    <nav class="hidden lg:block mobile-notch-left bg-primary-200 w-64 shadow flex-none">
       <div class="sticky top-0 h-full flex flex-col">
         <ul class="flex-1">
           {items.map((item) => (

@@ -113,9 +113,9 @@ export default function Challenges(pageProps: PageProps) {
     <Page pageProps={pageProps}>
       <div class="flex w-full h-full">
         <div
-          class={`flex-1 min-w-0 px-8 pb-4 overflow-auto mx-auto ${
+          class={`flex-1 min-w-0 px-8 pb-4 lg:overflow-auto ${
             !isIndexPage ? "hidden" : "block"
-          } md:block`}
+          } lg:block`}
         >
           {sorted.map(([category, challenges]) => (
             <Category
@@ -128,7 +128,7 @@ export default function Challenges(pageProps: PageProps) {
         <div
           class={`flex-1 min-w-0 bg-primary-50 shadow ${
             isIndexPage ? "hidden" : "block"
-          } md:block`}
+          } lg:block`}
         >
           Challenge info: {challengeID}
         </div>
@@ -152,7 +152,7 @@ function Category(
       >
         {props.name}
       </h3>
-      <div class="flex flex-wrap flex-col md:flex-row gap-4 pb-4">
+      <div class="flex flex-wrap flex-col lg:flex-row gap-4 pb-4">
         {props.challenges.map((x) => (
           <a href={`/challenges/${x.id}#${props.name}`}>
             <ChallengeCard

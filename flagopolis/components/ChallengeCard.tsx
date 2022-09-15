@@ -16,7 +16,7 @@ export interface Props {
 const ChallengeCard = ({ challenge, active }: Props) => {
   return (
     <div
-      class={`flex flex-col h-32 md:w-44 p-4 shadow-md rounded-2xl ring-primary-200 ${
+      class={`flex flex-col h-32 lg:w-44 p-4 shadow-md rounded-2xl ring-primary-200 ${
         active && "ring-4"
       } ${challenge.solved ? "bg-primary-400" : "bg-secondary-300"}`}
     >
