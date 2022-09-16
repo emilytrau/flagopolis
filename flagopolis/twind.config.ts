@@ -11,12 +11,12 @@ export default {
       },
       fontFamily: {
         sans:
-          "'Encode Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+          "'Open Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
       },
     },
   },
   preflight: {
     "@import":
-      "url(https://fonts.bunny.net/css?family=encode-sans:100,200,300,400,500,600,700,800,900)",
+      "url(https://fonts.bunny.net/css?family=open-sans:300,400,500,600,700)",
   },
 } as Options;
