@@ -30,8 +30,16 @@ const ChallengeCard = ({ challenge, active }: Props) => {
       </div>
       <div class="flex items-end justify-between">
         <span>{challenge.points}</span>
-        <span class="overflow-ellipsis overflow-hidden">
+        <span
+          class={`${
+            challenge.solved && "hidden"
+          } overflow-ellipsis overflow-hidden`}
+        >
           {challenge.difficulty}
+        </span>
+        <span class={`${!challenge.solved && "hidden"}`}>
+          {/* additional text indicator increases accessibility for colour impaired */}
+          solved 📪
         </span>
       </div>
     </div>
