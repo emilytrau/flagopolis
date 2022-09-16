@@ -31,6 +31,7 @@ const Page = ({ children, pageProps }: Props) => {
             `,
           }}
         />
+        <link rel="preconnect" href="https://fonts.bunny.net" />
       </Head>
       <div class="flex flex-col lg:flex-row w-screen min-h-[100svh] lg:h-screen">
         <Navigation pageProps={pageProps} />

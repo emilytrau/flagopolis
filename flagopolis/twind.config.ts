@@ -9,6 +9,12 @@ export default {
         primary: colors.lime,
         secondary: colors.blueGray,
       },
+      fontFamily: {
+        sans: "Cabin, sans-serif",
+      },
     },
+  },
+  preflight: {
+    "@import": "url(https://fonts.bunny.net/css?family=cabin:400,500,600,700)",
   },
 } as Options;
