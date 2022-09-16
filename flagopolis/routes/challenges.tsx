@@ -126,7 +126,7 @@ export default function Challenges(pageProps: PageProps) {
           ))}
         </div>
         <div
-          class={`flex-1 min-w-0 bg-primary-50 shadow ${
+          class={`flex-1 min-w-0 lg:bg-primary-50 lg:shadow ${
             isIndexPage ? "hidden" : "block"
           } lg:block`}
         >
