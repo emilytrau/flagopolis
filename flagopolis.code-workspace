@@ -29,7 +29,8 @@
 	"extensions": {
 		"recommendations": [
 			"denoland.vscode-deno",
-			"eamodio.gitlens"
+			"eamodio.gitlens",
+			"ms-azuretools.vscode-docker"
 		]
 	}
 }

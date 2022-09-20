@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  scoreboard:
+    image: denoland/deno:1.25.3
+    command: task --cwd /app start
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000

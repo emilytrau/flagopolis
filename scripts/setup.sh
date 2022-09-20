@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DENO_VERSION="1.25.2"
+DENO_VERSION="1.25.3"
 
 if ! command -v sqlite3 &> /dev/null; then
   sudo apt-get install -y sqlite3 libsqlite3-dev

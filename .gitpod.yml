@@ -5,8 +5,6 @@ tasks:
       source scripts/setup.sh
     init: |
       deno task cache
-    command: |
-      deno task start
 
 ports:
   - name: Flagopolis
@@ -17,6 +15,7 @@ vscode:
   extensions:
     - denoland.vscode-deno
     - eamodio.gitlens
+    - ms-azuretools.vscode-docker
     # - sastan.twind-intellisense
 
 github:
