@@ -16,7 +16,7 @@ vscode:
     - denoland.vscode-deno
     - eamodio.gitlens
     - ms-azuretools.vscode-docker
-    # - sastan.twind-intellisense
+    - tamasfe.even-better-toml
 
 github:
   prebuilds:
